@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,3 +40,13 @@ Route::get('/brand/edit/{id}', [BrandController::class, 'edit'])->name('brand.ed
 Route::post('/brand/update/{id}', [BrandController::class, 'update'])->name('brand.update');
 
 Route::get('/brand/delete/{id}', [BrandController::class, 'delete'])->name('brand.delete');
+
+
+// admin routes
+Route::get('home/slider', [HomeController::class, 'homeslider'])->name('home.slider');
+
+Route::get('add/slider', [HomeController::class, 'addslider'])->name('add.slider');
+
+Route::Post('store/slider', [HomeController::class, 'storeslider'])->name('store.slider');
+
+Route::get('slider/delete/{id}', [HomeController::class, 'deleteslider'])->name('slider.delete');

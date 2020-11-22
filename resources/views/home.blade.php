@@ -252,7 +252,7 @@
         @foreach ($brands as $brand)
         <div class="col-lg-3 col-md-4 col-6">
           <div class="client-logo">
-          <img src="{{$brand->brand_image}}" class="img-fluid" alt="">
+          <img src="{{$brand->brand_image}}" class="img-fluid" alt="{{$brand->brand_name}}">
           </div>
         </div>
         @endforeach

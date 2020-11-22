@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\BrandController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +27,14 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('user/logout', [AdminController::class, 'logout'])->name('user.logout');
+
+//brand
+Route::get('/brand/all', [BrandController::class, 'index'])->name('all.brand');
+
+Route::post('/brand/store', [BrandController::class, 'store'])->name('store.brand');
+
+Route::get('/brand/edit/{id}', [BrandController::class, 'edit'])->name('brand.edit');
+
+Route::post('/brand/update/{id}', [BrandController::class, 'update'])->name('brand.update');
+
+Route::get('/brand/delete/{id}', [BrandController::class, 'delete'])->name('brand.delete');

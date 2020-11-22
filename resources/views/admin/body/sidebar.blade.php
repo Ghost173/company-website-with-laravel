@@ -46,25 +46,31 @@
                     
                       <li  class="active" >
                         <a class="sidenav-item-link" href="index.html">
-                          <span class="nav-text">Ecommerce</span>
+                          <span class="nav-text">Slider</span>
                           
                         </a>
                       </li>
-                    
-                  
-
-                  
-                  
-                    
-                      <li >
-                        <a class="sidenav-item-link" href="analytics.html">
-                          <span class="nav-text">Analytics</span>
-                          
-                          <span class="badge badge-success">new</span>
+                      <li  class="active" >
+                        <a class="sidenav-item-link" href="index.html">
+                          <span class="nav-text">About</span>
                           
                         </a>
                       </li>
+                      <li  class="active" >
+                        <a class="sidenav-item-link" href="index.html">
+                          <span class="nav-text">portfolio</span>
+                          
+                        </a>
+                      </li>
+                      <li  class="active" >
+                        <a class="sidenav-item-link" href="index.html">
+                          <span class="nav-text">Brand</span>
+                          
+                        </a>
+                      </li>
+                  
                     
+                  
                   
 
                   

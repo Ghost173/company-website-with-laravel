@@ -1,11 +1,7 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{-- {{ __('Dashboard') }} --}}
-        All Brand<b> </b>
-        <b style="float: right;"> Total category: <span class="badge badge-danger">{{count($brand)}}</span></b>
-        </h2>
-    </x-slot>
+@extends('admin.admin_master')
+
+
+@section('admin')
 
     <div class="py-12">
         <div class="container">
@@ -33,7 +29,7 @@
                     <tbody>
                         @php ($i = 1)
                         @foreach ($brand as $brd)
-                        <th scope="row">{{$brand->firstItem()+$loop->index}}</th>
+                        <th scope="row">{{$brd->id}}</th>
                             <td>{{ $brd->brand_name}}</td>
                     <td><img src="{{asset($brd->brand_image)}}" style="height:50px; width:70px;" ></td>
                             <td>
@@ -52,7 +48,7 @@
                         @endforeach
                     </tbody>
                   </table>
-                  {{$brand->links()}}
+                  {{-- {{$brand->links()}} --}}
                 </div>
             </div>
 
@@ -90,4 +86,5 @@
 
 
     </div>
-</x-app-layout>
+
+    @endsection

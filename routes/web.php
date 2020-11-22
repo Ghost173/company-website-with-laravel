@@ -19,7 +19,8 @@ Route::get('/email/verify', function () {
 })->middleware(['auth'])->name('verification.notice');
 
 Route::get('/', function () {
-    return view('home');
+    $brands = DB::table('brands')->get();
+    return view('home', compact('brands'));
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

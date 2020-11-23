@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +55,19 @@ Route::get('slider/delete/{id}', [HomeController::class, 'deleteslider'])->name(
 Route::get('slider/edit/{id}', [HomeController::class, 'editlider'])->name('slider.edit');
 
 Route::post('slider/update/{id}', [HomeController::class, 'updateslider'])->name('slider.update');
+
+
+
+
+//about
+Route::get('/home/about', [AboutController::class, 'index'])->name('home.about');
+
+Route::get('/about/create', [AboutController::class, 'addabout'])->name('add.about');
+
+Route::Post('about/store', [AboutController::class, 'storeslider'])->name('store.about');
+
+Route::get('/about/edit/{id}', [AboutController::class, 'editabout'])->name('about.edit');
+
+Route::post('/about/update/{id}', [AboutController::class, 'updateabout'])->name('about.update');
+
+Route::get('/about/delete/{id}', [AboutController::class, 'deleteabout'])->name('about.delete');

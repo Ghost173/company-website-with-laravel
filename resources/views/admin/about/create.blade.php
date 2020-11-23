@@ -16,25 +16,27 @@
         </div>
         @endif
         <div class="card-header card-header-border-bottom">
-            <h2>Create Slider</h2>
+            <h2>Create Home About</h2>
         </div>
         <div class="card-body">
-        <form action="{{route('store.slider')}}" method="POST">
+        <form action="{{route('store.about')}}" method="POST" enctype="multipart/form-data">
             @csrf
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">slider title</label>
+                    <label for="exampleFormControlInput1">About title</label>
                     <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="slider title">
                     
                 </div>
                      
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descrptions</label>
-                    <textarea class="form-control" name="dec" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1">Short Descrptions</label>
+                    <textarea class="form-control" name="short_dis" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
+
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">file input</label>
-                    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+                    <label for="exampleFormControlTextarea1">Long Descrptions</label>
+                    <textarea class="form-control" name="long_dis" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
+               
                 <div class="form-footer pt-4 pt-5 mt-4 border-top">
                     <button type="submit" class="btn btn-primary btn-default">Submit</button>
                 </div>

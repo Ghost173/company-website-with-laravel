@@ -76,14 +76,14 @@ class HomeController extends Controller
                     'dec'=> $request->dec,
                     'image' =>$last_image
                 ]);
-                return redirect()->back()->with('message', 'barnd updated successfully');
+                return redirect()->route('home.slider')->with('message', 'barnd updated successfully');
         }else {
             Slider::find($id)->update([
                 'title' => $request->title,
                 'dec'=> $request->dec,
                
             ]);
-            return redirect()->back()->with('message', 'barnd updated successfully');
+            return redirect()->route('home.slider')->with('message', 'barnd updated successfully');
         }
       
     }

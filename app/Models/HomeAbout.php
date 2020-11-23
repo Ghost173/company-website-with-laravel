@@ -11,6 +11,9 @@ class HomeAbout extends Model
     protected $fillable = [
         'title',
         'short_dis',
-        'long_dis'
+        'long_dis',
+        'l1',
+        'l2',
+        'l3'
     ];
 }

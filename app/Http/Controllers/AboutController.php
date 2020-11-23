@@ -23,6 +23,9 @@ class AboutController extends Controller
             'title' => $request->title,
             'short_dis'=> $request->short_dis,
             'long_dis' => $request->long_dis,
+            'l1' => $request->l1,
+            'l2' => $request->l2,
+            'l3' => $request->l3,
             'created_at' =>Carbon::now()
         ]);
         return redirect()->route('home.about')->with('message', 'about details added successfully');
@@ -39,6 +42,9 @@ class AboutController extends Controller
             'title' => $request->title,
             'short_dis'=> $request->short_dis,
             'long_dis' => $request->long_dis,
+            'l1' => $request->l1,
+            'l2' => $request->l2,
+            'l3' => $request->l3,
         ]);
         return redirect()->route('home.about')->with('message', 'About updated successfully');
     }

@@ -28,6 +28,9 @@
                                 <th scope="col" >About title</th>
                                 <th scope="col" >Short decrption</th>
                                 <th scope="col" >Long decrption</th>
+                                <th scope="col" >list 1</th>
+                                <th scope="col" >list 2</th>
+                                <th scope="col" >list 3</th>
                                 <th scope="col" >Actions</th>
                               </tr>
                             </thead>
@@ -38,6 +41,9 @@
                                 <td>{{ Str::limit($about->title, 35)}}</td>
                                 <td>{{ Str::limit($about->short_dis, 40)}}</td>
                                 <td>{{ Str::limit($about->long_dis, 40)}}</td>
+                                <td>{{ Str::limit($about->l1, 5)}}</td>
+                                <td>{{ Str::limit($about->l2, 5)}}</td>
+                                <td>{{ Str::limit($about->l3, 5)}}</td>
                                     <td>
                                         <a href="{{route('about.edit',[$about->id])}}" class="btn btn-info">Edit</a>    
                                         <a href="{{route('about.delete',[$about->id])}}" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger">Delete</a>  

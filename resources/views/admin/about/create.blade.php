@@ -36,6 +36,21 @@
                     <label for="exampleFormControlTextarea1">Long Descrptions</label>
                     <textarea class="form-control" name="long_dis" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">List 1</label>
+                    <input type="text" class="form-control" name="l1" id="exampleFormControlInput1" placeholder="list 1">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">List 2</label>
+                    <input type="text" class="form-control" name="l2" id="exampleFormControlInput1" placeholder="list 2">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">List 3</label>
+                    <input type="text" class="form-control" name="l3" id="exampleFormControlInput1" placeholder="list 3">
+                    
+                </div>
                
                 <div class="form-footer pt-4 pt-5 mt-4 border-top">
                     <button type="submit" class="btn btn-primary btn-default">Submit</button>

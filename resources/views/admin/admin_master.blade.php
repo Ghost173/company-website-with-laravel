@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Sleek - Admin Dashboard Template</title>
+  <title>Admin Dashboard</title>
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet"/>
@@ -191,12 +191,12 @@
                   <footer class="footer mt-auto">
             <div class="copyright bg-white">
               <p>
-                &copy; <span id="copy-year">2019</span> Copyright Sleek Dashboard Bootstrap Template by
+                &copy; <span id="copy-year">2019</span> Design by
                 <a
                   class="text-primary"
-                  href="http://www.iamabdus.com/"
+                  href=""
                   target="_blank"
-                  >Abdus</a
+                  >ROOT</a
                 >.
               </p>
             </div>

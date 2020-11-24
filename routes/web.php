@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\MultiimageController;
+use App\Models\Multipic;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +25,8 @@ Route::get('/email/verify', function () {
 Route::get('/', function () {
     $brands = DB::table('brands')->get();
     $abouts = DB::table('home_abouts')->first();
-    return view('home', compact('brands','abouts'));
+    $images = Multipic::all();
+    return view('home', compact('brands','abouts','images'));
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -72,3 +75,12 @@ Route::get('/about/edit/{id}', [AboutController::class, 'editabout'])->name('abo
 Route::post('/about/update/{id}', [AboutController::class, 'updateabout'])->name('about.update');
 
 Route::get('/about/delete/{id}', [AboutController::class, 'deleteabout'])->name('about.delete');
+
+
+// PORTFOLIO
+
+Route::get('/multi/all', [MultiimageController::class, 'index'])->name('multi.image');
+
+Route::post('/multi/add', [MultiimageController::class, 'multiimage'])->name('store.images');
+
+Route::get  ('/multi/delete/{id}', [MultiimageController::class, 'multidelete'])->name('multy.delete');

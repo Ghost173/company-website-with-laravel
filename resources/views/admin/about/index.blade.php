@@ -6,8 +6,9 @@
     <div class="py-12">
         <div class="container">
             <div class="row">
-                <h2>Home slider</h2>
-            <a href="{{route('add.about')}}"  class="btn btn-success">Add About</a>
+                <h2>Home About</h2>
+                {{-- {{route('add.about')}} add buton route  --}}
+            <a href=""  class="btn btn-success" role="button" aria-disabled="true">Add About</a>
                 <div class="col-md-12">
                     <div class="card table-responsive">
                         @if(Session::has('message'))
@@ -46,7 +47,8 @@
                                 <td>{{ Str::limit($about->l3, 5)}}</td>
                                     <td>
                                         <a href="{{route('about.edit',[$about->id])}}" class="btn btn-info">Edit</a>    
-                                        <a href="{{route('about.delete',[$about->id])}}" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger">Delete</a>  
+                                        {{-- about delete route {{route('about.delete',[$about->id])}} --}}
+                                        <a href="" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger">Delete</a>  
                                     </td>    
                                   </tr>
                                 @endforeach

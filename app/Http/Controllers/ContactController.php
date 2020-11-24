@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Image;
 use Illuminate\Support\Carbon;
 use App\Models\Contact;
+use App\Models\Contactform;
 use Illuminate\Support\Facades\DB;
 
 
@@ -54,5 +55,32 @@ class ContactController extends Controller
     public function editcontact($id) {
         $contacts = Contact::find($id);
         return view('admin.contact.edit',compact('contacts'));
+    }
+
+
+    public function formcontact(Request $request) {
+        Contactform::insert([
+            'name' => $request->name,
+            'email'=> $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
+            'created_at' =>Carbon::now()
+        ]);
+        return redirect()->route('contact')->with('message', 'mail send  successfully');
+    }
+
+    public function contactmessage() {
+        $messages = Contactform::all();
+        return view('admin.contact.message',compact('messages'));
+    }
+
+    public function cmessagedelete($id) {
+        Contactform::find($id)->delete(); 
+        return redirect()->route('contact.message')->with('message', 'contact messages delete successfully');
+    }
+
+    public function viewmessage($id) {
+        $messages = Contactform::find($id);
+        return view('admin.contact.messageveiw',compact('messages'));
     }
 }

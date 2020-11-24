@@ -34,9 +34,8 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Contact Phone</label>
-                    <input type="text" class="form-control" name="phone" id="exampleFormControlInput1" value="{{$contacts->phone}}>
+                    <input type="text" class="form-control" name="phone" id="exampleFormControlInput1" value="{{$contacts->phone}}" >
                 </div>
-                
                
                 <div class="form-footer pt-4 pt-5 mt-4 border-top">
                     <button type="submit" class="btn btn-primary btn-default">Update</button>

@@ -45,7 +45,12 @@ class BrandController extends Controller
             'brand_image'=> $last_image,
             'created_at' =>Carbon::now()
         ]);
-        return redirect()->back()->with('message', 'barnd successfully');
+
+        $notificaton = array(
+            'message' => 'barnd successfully updated',
+            'alert-type' => 'success' 
+        );
+        return redirect()->back()->with($notificaton);
     }
 
 
@@ -89,7 +94,11 @@ class BrandController extends Controller
                 'brand_name' => $request->brand_name,
                 
             ]);
-            return redirect()->back()->with('message', 'barnd updated successfully');
+            $notificaton = array(
+                'message' => 'barnd updated successfully',
+                'alert-type' => 'warning' 
+            );
+            return redirect()->back()->with($notificaton);
         }
      
     }
@@ -101,6 +110,11 @@ class BrandController extends Controller
         unlink($old_image);
 
         Brand::find($id)->delete(); 
-        return redirect()->back()->with('message', 'barnd delete successfully');
+
+        $notificaton = array(
+            'message' => 'barnd delete successfully',
+            'alert-type' => 'error' 
+        );
+        return redirect()->back()->with($notificaton);
     }
 }

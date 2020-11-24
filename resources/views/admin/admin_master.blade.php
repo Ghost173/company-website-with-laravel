@@ -100,26 +100,26 @@
                   <!-- User Account -->
                   <li class="dropdown user-menu">
                     <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                      <img src="{{asset('backend/assets/img/user/user.png')}}" class="user-image" alt="User Image" />
-                      <span class="d-none d-lg-inline-block">Abdus Salam</span>
+                     
+                    <span class="d-none d-lg-inline-block">{{Auth::user()->name}}</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right">
                       <!-- User image -->
                       <li class="dropdown-header">
-                        <img src="assets/img/user/user.png" class="img-circle" alt="User Image" />
+                       
                         <div class="d-inline-block">
-                          Abdus Salam <small class="pt-1">abdus@gmail.com</small>
+                          {{Auth::user()->name}} <small class="pt-1">{{Auth::user()->email}}</small>
                         </div>
                       </li>
 
                       <li>
-                        <a href="profile.html">
+                      <a href="{{route('chnage.profile')}}">
                           <i class="mdi mdi-account"></i> My Profile
                         </a>
                       </li>
                       <li>
-                        <a href="email-inbox.html">
-                          <i class="mdi mdi-email"></i> Message
+                        <a href="{{route('chnage.password')}}">
+                          <i class="mdi mdi-email"></i> Chnage password
                         </a>
                       </li>
                       <li>

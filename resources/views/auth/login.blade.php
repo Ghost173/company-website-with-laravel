@@ -46,6 +46,13 @@
       <div class="row justify-content-center mt-5">
         <div class="col-xl-5 col-lg-6 col-md-10">
           <div class="card">
+            
+            @if(Session::has('message'))
+            <div class="alert alert-success">
+                {{Session::get('message')}}
+            </div>
+          
+            @endif
             <div class="card-header bg-primary">
               <div class="app-brand">
                 <a href="">

@@ -9,6 +9,7 @@ use App\Http\Controllers\MultiimageController;
 use App\Models\Multipic;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ChangePassController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -117,3 +118,15 @@ Route::get('/contact/vmessage{id}', [ContactController::class, 'viewmessage'])->
 //home coantcat send
 
 Route::post('/contact/form', [ContactController::class, 'formcontact'])->name('contact.form');
+
+
+// chnage password for user
+
+Route::get('/user/password', [ChangePassController::class, 'changepassword'])->name('chnage.password');
+
+Route::post('/password/update', [ChangePassController::class, 'updatepassword'])->name('password.update');
+
+// user profile
+Route::get('/user/profile', [ChangePassController::class, 'profileupdate'])->name('chnage.profile');
+
+Route::post('/user/profile/update', [ChangePassController::class, 'saveprofile'])->name('update.user.profile');

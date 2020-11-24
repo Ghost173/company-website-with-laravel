@@ -76,12 +76,12 @@
 
 
             <li  class="has-sub active expand" >
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard"
-                aria-expanded="false" aria-controls="dashboard">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#contact"
+                aria-expanded="false" aria-controls="contact">
                 <i class="mdi mdi-view-dashboard-outline"></i>
                 <span class="nav-text">Contact</span> <b class="caret"></b>
               </a>
-              <ul  class="collapse show"  id="dashboard"
+              <ul  class="collapse show"  id="contact"
                 data-parent="#sidebar-menu">
                 <div class="sub-menu">
                   

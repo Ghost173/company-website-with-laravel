@@ -81,13 +81,13 @@ class BrandController extends Controller
             Brand::find($id)->update([
                 'brand_name' => $request->brand_name,
                 'brand_image'=> $last_image,
-                'created_at' =>Carbon::now()
+               
             ]);
             return redirect()->back()->with('message', 'barnd updated successfully');
         } else{
             Brand::find($id)->update([
                 'brand_name' => $request->brand_name,
-                'created_at' =>Carbon::now()
+                
             ]);
             return redirect()->back()->with('message', 'barnd updated successfully');
         }

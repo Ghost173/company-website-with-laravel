@@ -7,6 +7,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\MultiimageController;
 use App\Models\Multipic;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +29,7 @@ Route::get('/', function () {
     $abouts = DB::table('home_abouts')->first();
     $images = Multipic::all();
     return view('home', compact('brands','abouts','images'));
-});
+})->name('main.home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.index');
@@ -84,3 +86,10 @@ Route::get('/multi/all', [MultiimageController::class, 'index'])->name('multi.im
 Route::post('/multi/add', [MultiimageController::class, 'multiimage'])->name('store.images');
 
 Route::get  ('/multi/delete/{id}', [MultiimageController::class, 'multidelete'])->name('multy.delete');
+
+
+//Portfolio
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+
+//contact admin
+Route::get('/admin/contact', [ContactController::class, 'admincontact'])->name('contact.admin');

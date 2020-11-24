@@ -8,11 +8,11 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="card">
-                        @if(Session::has('message'))
+                        {{-- @if(Session::has('message'))
                             <div class="alert alert-success">
                                 {{Session::get('message')}}
                             </div>
-                            @endif
+                            @endif --}}
                             <div class="card-header">All Brand</div>
 
                     

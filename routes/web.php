@@ -10,6 +10,8 @@ use App\Models\Multipic;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ChangePassController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SocialController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,7 +31,9 @@ Route::get('/', function () {
     $brands = DB::table('brands')->get();
     $abouts = DB::table('home_abouts')->first();
     $images = Multipic::all();
-    return view('home', compact('brands','abouts','images'));
+    $service = DB::table('services')->first();
+    
+    return view('home', compact('brands','abouts','images','service'));
 })->name('main.home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -130,3 +134,24 @@ Route::post('/password/update', [ChangePassController::class, 'updatepassword'])
 Route::get('/user/profile', [ChangePassController::class, 'profileupdate'])->name('chnage.profile');
 
 Route::post('/user/profile/update', [ChangePassController::class, 'saveprofile'])->name('update.user.profile');
+
+
+
+//services
+
+Route::get('/admin/services', [ServiceController::class, 'index'])->name('service.view');
+
+Route::post('/admin/services/store', [ServiceController::class, 'store'])->name('service.store');
+
+Route::post('/admin/services/update/{id}', [ServiceController::class, 'update'])->name('services.update');
+
+
+
+//social links
+
+Route::get('/admin/social', [SocialController::class, 'index'])->name('social.view');
+
+
+Route::post('/admin/social/create', [SocialController::class, 'store'])->name('social.create');
+
+Route::post('/admin/social/update/{id}', [SocialController::class, 'undate'])->name('social.update');

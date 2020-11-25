@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Brand;
 use Illuminate\Support\Carbon;
 use Image;
+use Illuminate\Support\Facades\DB;
+
 
 class BrandController extends Controller
 {

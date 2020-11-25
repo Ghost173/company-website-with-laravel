@@ -69,6 +69,13 @@
                         </a>
                       </li>
 
+                      <li  class="active" >
+                        <a class="sidenav-item-link" href="{{route('service.view')}}">
+                          <span class="nav-text">Services</span>
+                          
+                        </a>
+                      </li>
+
                   
                 </div>
               </ul>
@@ -106,7 +113,34 @@
                 </div>
               </ul>
             </li>
-          
+            
+            {{-- Services --}}
+            <li  class="has-sub active expand" >
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Sociallinks"
+                aria-expanded="false" aria-controls="Sociallinks">
+                <i class="mdi mdi-view-dashboard-outline"></i>
+                <span class="nav-text">Sociallinks</span> <b class="caret"></b>
+              </a>
+              <ul  class="collapse show"  id="Sociallinks"
+                data-parent="#sidebar-menu">
+                <div class="sub-menu">
+                  
+                  
+                    
+                      <li  class="active" >
+                        <a class="sidenav-item-link" href="{{route('social.view')}}">
+                          <span class="nav-text">Sociallinks</span>
+                          
+                        </a>
+                      </li>
+
+                      
+                      
+
+                  
+                </div>
+              </ul>
+            </li>
 
           
 

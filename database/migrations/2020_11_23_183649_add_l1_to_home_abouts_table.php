@@ -14,9 +14,9 @@ class AddL1ToHomeAboutsTable extends Migration
     public function up()
     {
         Schema::table('home_abouts', function (Blueprint $table) {
-            $table->string('l1');
-            $table->string('l2');
-            $table->string('l3');
+            $table->string('l1e');
+            $table->string('l2e');
+            $table->string('l3e');
         });
     }
 

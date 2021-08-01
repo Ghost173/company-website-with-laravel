@@ -21,8 +21,6 @@ class CreateHomeAboutsTable extends Migration
             $table->string('l1');
             $table->string('l2');
             $table->string('l3');
-           
-
             $table->timestamps();
         });
     }
